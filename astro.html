@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StellarPath — Personal Astrology</title>
+  <link rel="stylesheet" href="./astro.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="grid">
+      <div class="left-hero card">
+        <div class="brand">
+          <div class="logo">SP</div>
+          <div>
+            <h1>StellarPath</h1>
+            <div class="lead">Enter your details to receive a short personalised reading based on your birth date.</div>
+          </div>
+        </div>
+
+        <form id="astroForm" autocomplete="off">
+          <div class="row">
+            <div class="field" style="flex:1">
+              <label for="fname">First name</label>
+              <input id="fname" name="fname" type="text" placeholder="eg. Priya" required />
+            </div>
+            <div class="field" style="flex:1">
+              <label for="lname">Surname</label>
+              <input id="lname" name="lname" type="text" placeholder="eg. Sharma" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="day">Day</label>
+              <input id="day" name="day" type="number" min="1" max="31" placeholder="DD" required />
+            </div>
+            <div class="field">
+              <label for="month">Month</label>
+              <select id="month" name="month" required>
+                <option value="">-- Month --</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="year">Year</label>
+              <input id="year" name="year" type="number" min="1900" max="2099" placeholder="YYYY" required />
+            </div>
+          </div>
+
+          <button class="btn" type="submit">Reveal my sign ✨</button>
+        </form>
+
+        <div class="small">Tip: keep inputs truthful for more meaningful, fun readings. This demo uses sun-sign logic (based on day/month).</div>
+      </div>
+
+      <div class="right-result card result" id="result">
+        <div>
+          <div class="sign">
+            <div class="symbol" id="symbol">🌙</div>
+            <div>
+              <h2 id="signName">Your Sign</h2>
+              <div class="meta" id="range">—</div>
+            </div>
+          </div>
+
+          <div class="desc" id="desc">Fill the form and click "Reveal my sign" to see a short, positive reading tailored to your sun sign. The results are playful and intended for entertainment.</div>
+
+          <div class="chips" id="chips"></div>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px">
+          <div class="meta" id="fullName">—</div>
+          <div>
+            <button class="btn" id="shareBtn">Copy reading</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stars" aria-hidden></div>
+  </div>
+
+  <script src="./astro.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HMLG Astrology — Future Generator</title>
+ <link rel="stylesheet" href="./astrology.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="stage">
+      <div class="panel">
+        <div class="logo">
+          <div class="orb" aria-hidden>
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2v20M2 12h20" stroke="rgba(255,255,255,0.7)" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <h1>Astro</h1>
+            <div class="sub">Tell us your name and we’ll generate a playful prediction.</div>
+          </div>
+        </div>
+
+        <form id="astroForm" autocomplete="off">
+          <div>
+            <label>First Name</label>
+            <input id="fname" type="text" placeholder="enter your 1st name" required />
+          </div>
+          <div>
+            <label>Surname</label>
+            <input id="sname" type="text" placeholder="enter your surname" required />
+          </div>
+
+          <div class="dob">
+            <div style="flex:0 0 28%">
+              <label>Day</label>
+              <input id="day" type="number" min="1" max="31" placeholder="DD" required />
+            </div>
+            <div style="flex:0 0 38%">
+              <label>Month</label>
+              <select id="month" required>
+                <option value="">Select</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+            </div>
+            <div style="flex:0 0 34%">
+              <label>Year</label>
+              <input id="year" type="number" min="1900" max="2099" placeholder="YYYY" required />
+            </div>
+          </div>
+
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:8px">
+            <div class="small">Please fill in all fields before submitting</div>
+            <button class="btn" type="submit">Predict <span style="opacity:.9">✨</span></button>
+          </div>  
+        </form>
+
+        <div style="margin-top:16px;color:rgba(233,238,248,0.6);font-size:13px">Note: This is for entertainment purposes only — please seek professional advice for real-life decisions.</div>
+      </div>
+
+      <div class="scene">
+        <div class="stars" id="stars"></div>
+        <div class="sparkle"></div>
+
+        <div class="planet-wrap" aria-hidden>
+          <div class="ring"></div>
+          <div class="planet"></div>
+        </div>
+
+        <div class="result-card" id="resultCard">
+          <h2 class="result-title">Preview of Your Future</h2>
+          <div class="result-body" id="resultBody">Enter your name and date of birth, then click 'Predict' — we will write a beautiful and positive future for you.</div>
+          <div class="tag" id="tagOut">Waiting</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <script src="./astrology.js"></script>
+</body>
+</html>

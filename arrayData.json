@@ -1,0 +1,48 @@
+{
+  "restaurants": [
+    "Spice Garden",
+    "Urban Bites",
+    "Golden Fork",
+    "The Hungry Panda",
+    "Ocean Flavors",
+    "Mountain Feast",
+    "Crave & Savor",
+    "Royal Curry House",
+    "Sizzling Spoon",
+    "The Rustic Table",
+    "Savory Street",
+    "Basil & Thyme",
+    "Grill & Chill",
+    "Fusion Feast",
+    "Harvest Kitchen",
+    "Flavors of Heaven",
+    "The Tasty Corner",
+    "Midnight Biryani",
+    "Coastal Curry",
+    "Pepper & Plate"
+  ],
+  "foodTypes": [
+    "Italian",
+    "Chinese",
+    "Mexican",
+    "Indian",
+    "Japanese",
+    "Thai",
+    "Mediterranean",
+    "American",
+    "French",
+    "Korean"
+  ],
+  "locations": [
+    "Connaught Place",
+    "Chandni Chowk",
+    "Karol Bagh",
+    "Lajpat Nagar",
+    "Hauz Khas",
+    "Saket",
+    "Rajouri Garden",
+    "Dwarka",
+    "Rohini",
+    "Vasant Kunj"
+  ]
+}
